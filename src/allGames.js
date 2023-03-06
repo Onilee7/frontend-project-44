@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import * as readlineSync from 'readline-sync';
 
 let GameOver;
