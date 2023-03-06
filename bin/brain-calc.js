@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runGameWithCounter from '../src/allGames.js';\n
+/* eslint-disable quotes */
+import runGameWithCounter from '../src/allGames.js'; 
 
 runGameWithCounter("brain-calc");
