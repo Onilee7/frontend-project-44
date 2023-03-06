@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runGameWithCounter from "../src/allGames.js";
+// eslint-disable-next-line quotes
+import runGameWithCounter from '../src/allGames.js';
 
 runGameWithCounter("brain-gcd");
