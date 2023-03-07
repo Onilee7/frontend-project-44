@@ -32,26 +32,26 @@ const rulesOfGame = (nameGame) => {
       break;
     case 'brain-gcd':
       console.log('Find the greatest common divisor of given numbers.');
-      break;	
+      break;
     case 'brain-progression':
       console.log('What number is missing in the progression?');
       break;
     case 'brain-prime':
       console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
       break;
-	}
+  }
 };
 
 // Вывод рандомного числа
 function getRandom(min, max) {
-	const minCopy = Math.ceil(min);
-	const maxCopy = Math.floor(max);
-	return Math.floor(Math.random() * (maxCopy - minCopy)) + minCopy;
+  const minCopy = Math.ceil(min);
+  const maxCopy = Math.floor(max);
+  return Math.floor(Math.random() * (maxCopy - minCopy)) + minCopy;
 }
 
 // Рандомный математический знак
 const getRandomMathSign = () => {
-	const arr = ["+", "-", "*"];
+	const arr = ['+', '-', '*'];
 	const i = Math.floor(Math.random() * arr.length);
 	const operator = arr[i];
 	return operator;
@@ -82,30 +82,30 @@ const question = (nameGame) => {
 	sign = getRandomMathSign();
 	let questionResult;
 	switch (nameGame) {
-  case "brain-even":
-  questionResult = console.log(`${"Question:"} ${firstRandomNumber}`);
-break;
-case "brain-calc":
-  questionResult = console.log(`${"Question:"} ${firstRandomNumber} ${sign} ${secondRandomNumber}`);
-break;
-case "brain-gcd":
-  questionResult = console.log(`${"Question:"} ${firstRandomNumber} ${secondRandomNumber}`);
-break;
-case "brain-progression":
-  questionResult = console.log(`${"Question:"} ${progression(firstRandomNumber, stepProgress)}`);
-break;
-case "brain-prime":
-  questionResult = console.log(`${"Question:"} ${firstRandomNumber}`);
-break;
-default:
-  console.log("Sorry, something wrong");
-break;
-	}
-	return questionResult;
+  case 'brain-even':
+      questionResult = console.log(`${'Question:'} ${firstRandomNumber}`);
+      break;
+  case 'brain-calc':
+      questionResult = console.log(`${'Question:'} ${firstRandomNumber} ${sign} ${secondRandomNumber}`);
+      break;
+  case 'brain-gcd':
+      questionResult = console.log(`${'Question:'} ${firstRandomNumber} ${secondRandomNumber}`);
+      break;
+  case 'brain-progression':
+      questionResult = console.log(`${'Question:'} ${progression(firstRandomNumber, stepProgress)}`);
+      break;
+  case 'brain-prime':
+      questionResult = console.log(`${'Question:'} ${firstRandomNumber}`);
+      break;
+  default:
+      console.log('Sorry, something wrong');
+      break;
+}
+return questionResult;
 };
 
 // Ответ от пользователя
-const getUsersAnswer = () => readlineSync.question("Your answer: ");
+const getUsersAnswer = () => readlineSync.question('Your answer: ');
 
 // Расчет правильно ответа brain-even
 const brainEvenCorrectAnswer = (a) => {
