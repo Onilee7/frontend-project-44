@@ -12,19 +12,19 @@ let stepProgress;
 
 // Приветствие
 const greetings = () => {
-	userName = readlineSync.question("Welcome to the Brain Games! \nMay I have your name? ");
+  userName = readlineSync.question('Welcome to the Brain Games! \nMay I have your name? ');
   console.log(`${'Hello,'} ${userName}${'!'}`);
-	};
+};
 
 // Определение имени
 function getUsersName() {
-	return userName;
+  return userName;
 }
 
 // Правила игры
 const rulesOfGame = (nameGame) => {
-	switch (nameGame) {
-case "brain-even":
+  switch (nameGame) {
+default case "brain-even":
   console.log('Answer \"yes\" if the number is even, otherwise answer \"no\".');
 break;
   case "brain-calc":
