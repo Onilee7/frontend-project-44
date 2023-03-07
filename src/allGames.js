@@ -1,4 +1,4 @@
-import * as readlineSync from "readline-sync";
+import * as readlineSync from 'readline-sync';
 
 let GameOver;
 let userName;
@@ -10,44 +10,37 @@ let sign;
 let ProgressionNumber;
 let stepProgress;
 
-
 // Приветствие
 const greetings = () => {
 	userName = readlineSync.question("Welcome to the Brain Games! \nMay I have your name? ");
-	console.log(`${"Hello,"} ${userName}${"!"}`);
-};
+  console.log(`${'Hello,'} ${userName}${'!'}`);
+	};
 
 // Определение имени
 function getUsersName() {
 	return userName;
 }
+
 // Правила игры
 const rulesOfGame = (nameGame) => {
 	switch (nameGame) {
-
-	case "brain-even":
-		console.log("Answer \"yes\" if the number is even, otherwise answer \"no\".");
-		break;
-
-	case "brain-calc":
-		console.log("What is the result of the expression?");
-		break;
-
-	case "brain-gcd":
-		console.log("Find the greatest common divisor of given numbers.");
-		break;	
-
-	case "brain-progression":
-		console.log("What number is missing in the progression?");
-		break;
-
-	case "brain-prime":
-		console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
-		break;
-
+case "brain-even":
+  console.log('Answer \"yes\" if the number is even, otherwise answer \"no\".');
+break;
+  case "brain-calc":
+  console.log('What is the result of the expression?');
+break;
+case "brain-gcd":
+  console.log('Find the greatest common divisor of given numbers.');
+break;	
+case "brain-progression":
+  console.log('What number is missing in the progression?');
+break;
+case "brain-prime":
+  console.log('Answer \"yes\" if given number is prime. Otherwise answer \"no\".');
+break;
 	}
 };
-
 
 // Вывод рандомного числа
 function getRandom(min, max) {
@@ -83,37 +76,30 @@ const progression = () => {
 };
 
 // Вопрос игроку
-
 const question = (nameGame) => {
 	firstRandomNumber = getRandom(2, 100);
 	secondRandomNumber = getRandom(1, 100);
 	sign = getRandomMathSign();
 	let questionResult;
 	switch (nameGame) {
-
-	case "brain-even":
-		questionResult = console.log(`${"Question:"} ${firstRandomNumber}`);
-		break;
-		
-	case "brain-calc":
-		questionResult = console.log(`${"Question:"} ${firstRandomNumber} ${sign} ${secondRandomNumber}`);
-		break;
-
-	case "brain-gcd":
-		questionResult = console.log(`${"Question:"} ${firstRandomNumber} ${secondRandomNumber}`);
-		break;
-
-	case "brain-progression":
-		questionResult = console.log(`${"Question:"} ${progression(firstRandomNumber, stepProgress)}`);
-		break;
-
-	case "brain-prime":
-		questionResult = console.log(`${"Question:"} ${firstRandomNumber}`);
-		break;
-	
-	default:
-		console.log("Sorry, something wrong");
-		break;
+  case "brain-even":
+  questionResult = console.log(`${"Question:"} ${firstRandomNumber}`);
+break;
+case "brain-calc":
+  questionResult = console.log(`${"Question:"} ${firstRandomNumber} ${sign} ${secondRandomNumber}`);
+break;
+case "brain-gcd":
+  questionResult = console.log(`${"Question:"} ${firstRandomNumber} ${secondRandomNumber}`);
+break;
+case "brain-progression":
+  questionResult = console.log(`${"Question:"} ${progression(firstRandomNumber, stepProgress)}`);
+break;
+case "brain-prime":
+  questionResult = console.log(`${"Question:"} ${firstRandomNumber}`);
+break;
+default:
+  console.log("Sorry, something wrong");
+break;
 	}
 	return questionResult;
 };
