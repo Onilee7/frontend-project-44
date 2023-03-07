@@ -24,7 +24,7 @@ function getUsersName() {
 // Правила игры
 const rulesOfGame = (nameGame) => {
   switch (nameGame) {
-default case "brain-even":
+ case "brain-even":
   console.log('Answer \"yes\" if the number is even, otherwise answer \"no\".');
 break;
   case "brain-calc":
