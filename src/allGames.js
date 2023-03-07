@@ -160,7 +160,7 @@ const correctAnswer = (nameGame) => {
     case 'brain-gcd':
       CorrectAnswer = brainGcdCorrectAnswer(firstRandomNumber, secondRandomNumber);
       break;
-	case 'brain-progression':
+    case 'brain-progression':
       CorrectAnswer = ProgressionNumber;
       break;
     case 'brain-prime':
@@ -184,7 +184,7 @@ const compareOfAnswer = (nameGame) => {
     textOfcorrectAnswer();
   } else {
     console.log(`${userAnswer} ${'is wrong answer ;(. Correct answer was'} ${answer}.\n${"Let's try again,"} ${getUsersName()}!`);
-    GameOver = "true";
+    GameOver = 'true';
   }
 };
 
@@ -199,7 +199,7 @@ const runGameWithCounter = (nameGame) => {
     compareOfAnswer(nameGame);
     i += 1;
   }
-  if (i === 3 && GameOver !== "true") {
+  if (i === 3 && GameOver !== 'true') {
     console.log(`${'Congratulations,'} ${getUsersName()}!`);
   }
 };
